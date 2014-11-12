@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vince.myapplication.MyActivity4" >
+    <item android:id="@+id/action_settings"
+        android:title="后退"
+        android:icon="@drawable/back"
+        android:orderInCategory="1"
+        android:showAsAction="never" />
+    <item android:id="@+id/share"
+        android:title="share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider"/>
+    <item android:id="@+id/search"
+        android:title="search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom"
+        android:actionViewClass="android.widget.SearchView"/>
+
+</menu>

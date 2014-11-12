@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vince.myapplication" >
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyAppTheme">
+        <activity
+            android:name=".DemoCanvas"
+            android:label="@string/app_name" >
+
+            <!--
+                <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <!--
+            <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!-- This service is only used on devices with API v17+ -->
+        <activity
+            android:name=".MyActivity2"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".MyActivity3"
+            android:label="@string/title_activity_my_activity3" >
+        </activity>
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/title_item_list" >
+        </activity>
+        <activity
+            android:name=".ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vince.myapp.ItemListActivity" />
+        </activity>
+
+        <receiver
+            android:name=".MyExampleAppWidgetProvider"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/example_appwidget_info" />
+        </receiver>
+
+        <activity
+            android:name=".UIDemoActivity"
+            android:label="@string/title_activity_uidemo"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyActivity4"
+            android:label="@string/title_activity_my_activity4"
+            android:parentActivityName=".UIDemoActivity"
+            android:screenOrientation="landscape" >
+
+        </activity>
+        <activity
+            android:name=".PaintSega"
+            android:label="程序绘制图表"
+            android:screenOrientation="landscape">
+            </activity>
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <activity android:name=".Test" >
+        </activity>
+    </application>
+
+</manifest>

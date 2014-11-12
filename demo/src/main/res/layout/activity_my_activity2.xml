@@ -1,0 +1,62 @@
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.vince.myapplication.MyActivity2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="0:00:00↑"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff1c1eff"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="150dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:text="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff1c1eff"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="35dp"
+        android:textSize="150dp"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="pause"
+        android:id="@+id/button"
+        android:layout_marginTop="35dp"
+        android:textSize="50dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="sqlite"
+        android:id="@+id/button2"
+        android:layout_marginTop="35dp"
+        android:textSize="50dp"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
+<fragment
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.vince.myapplication.MyFragment"/>
+</FrameLayout>
